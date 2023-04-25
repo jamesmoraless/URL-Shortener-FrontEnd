@@ -21,17 +21,16 @@ function App() {
   };
   return (
     
-    <Register />
+    //<Register />
     //<Login />
-    /* <div className="shortener-div"> 
+     <div className="shortener-div"> 
         <div>
           <Shortener reloadUrlTable={reloadUrlTable}/>
         </div>
         <div>
           <UrlTable key={UrlTableKey}/>
         </div>
-        </div>
- */    
+        </div> 
 
   );
 }
