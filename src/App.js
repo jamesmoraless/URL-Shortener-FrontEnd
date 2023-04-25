@@ -1,5 +1,6 @@
 import Register from "./components/Register";
 import Login from "./components/Login";
+import Shortener from "./components/Shortener";
 
 
 //this file is used to instantiate the various pages 
@@ -7,7 +8,9 @@ import Login from "./components/Login";
 function App() {
   return (
     //<Register />
-    <Login />
+    //<Login />
+    <Shortener />
+
   );
 }
 
