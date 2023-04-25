@@ -41,12 +41,16 @@ export default function Login() {
                 type = "username"
                 placeholder="Username"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}/>
+                onChange={(e) => setUsername(e.target.value)}
+                required
+                />
                 <input
                 type = "password"
                 placeholder = "Password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}/>
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                />
                 <button type="submit">Login</button>        
             </form> 
             {message && <p className="login-message">{message}</p>}

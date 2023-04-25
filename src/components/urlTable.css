@@ -1,0 +1,34 @@
+.UrlTable-section {
+    height: auto;
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+  }
+.url-table {
+    table-layout: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .urltable-title {
+    justify-content: center;
+    align-items: center;
+    display:flex;
+  }
+  
+  .url-table th {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .url-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .url-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

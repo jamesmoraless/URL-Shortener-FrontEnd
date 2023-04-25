@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './shortener.css';
 
-export default function Shortener() {
+export default function Shortener(props) {
     const [longUrl, setLongUrl] = useState('');
     const [shortUrl, setShortUrl] = useState('');//might have to start w my api and append later with the id 
 
@@ -24,6 +24,7 @@ export default function Shortener() {
             //console.log('Data:', data);
             if (data.short_id) {
                 setShortUrl(`http://localhost:5000/api/v1/urlshortener/${data.short_id}`);
+                props.reloadUrlTable(); // call the function to trigger re-render of UrlTable component
               } else {
                 setShortUrl('An error occurred while shortening the URL.');
               }
@@ -43,7 +44,7 @@ export default function Shortener() {
       };
 
   return (
-    
+    <section className="shortener-section">
     <div className = "shortener-container">
         <h2 className="shortener-title">Shorten URL</h2>
         <form className="shortener-form" onSubmit={handleSubmit}>
@@ -51,7 +52,9 @@ export default function Shortener() {
             type = "text"
             placeholder="http://helloWorld.com"
             value={longUrl}
-            onChange={(e) => setLongUrl(e.target.value)}/>
+            onChange={(e) => setLongUrl(e.target.value)}
+            required
+            />
             <button type="submit">Shorten</button>        
             </form> 
             {shortUrl && (
@@ -62,9 +65,11 @@ export default function Shortener() {
                     </button>
               </div>
             )}
-            {<a href="#ddd">
-                <h3 className="scroll">View Your Shortened Links</h3></a>}
+            {<a href="#UrlTable">
+                <h3 className="scroll">View Your Shortened Links</h3>                
+                </a>}
     </div>
+    </section>
     
   )
 }
