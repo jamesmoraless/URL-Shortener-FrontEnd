@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Shortener from "./components/Shortener";
@@ -19,19 +20,18 @@ function App() {
     setUrlTableKey(UrlTableKey + 1); // update key to trigger re-render of UrlTable component
   };
   return (
-    //<Register />
+    
+    <Register />
     //<Login />
-    <div className="shortener-div"> 
-    <div>
-      <Shortener reloadUrlTable={reloadUrlTable}/>
-    </div>
-    <div>
-      <UrlTable key={UrlTableKey}/>
-    </div>
-    </div> 
-    
-    
-    
+    /* <div className="shortener-div"> 
+        <div>
+          <Shortener reloadUrlTable={reloadUrlTable}/>
+        </div>
+        <div>
+          <UrlTable key={UrlTableKey}/>
+        </div>
+        </div>
+ */    
 
   );
 }
