@@ -32,6 +32,16 @@ export default function Shortener() {
         }
     };
 
+    const handleCopy = async () => {
+        try {
+          await navigator.clipboard.writeText(shortUrl);
+          alert('Short URL copied to clipboard!');
+          //console.log('Copied to clipboard:', shortUrl);
+        } catch (err) {
+          console.log('Failed to copy:', err);
+        }
+      };
+
   return (
     
     <div className = "shortener-container">
@@ -44,7 +54,16 @@ export default function Shortener() {
             onChange={(e) => setLongUrl(e.target.value)}/>
             <button type="submit">Shorten</button>        
             </form> 
-            {shortUrl && <p className="shortener-url">{shortUrl}</p>}
+            {shortUrl && (
+                <div className="shortener-result">
+                    <p className="shortener-url">{shortUrl}</p>
+                    <button className="shortener-copy" onClick={handleCopy}>
+                    Copy
+                    </button>
+              </div>
+            )}
+            {<a href="#ddd">
+                <h3 className="scroll">View Your Shortened Links</h3></a>}
     </div>
     
   )

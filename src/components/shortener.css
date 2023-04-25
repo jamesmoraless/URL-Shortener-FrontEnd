@@ -1,0 +1,85 @@
+.shortener-container{
+    width:100%;
+    max-width: 600px;
+    border-radius: 25px;
+    margin: 5rem auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    height: 40vh;
+}
+
+.shortener-title{
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    font-size: 3rem;
+}
+
+.shortener-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.shortener-form input{
+    background-color:rgba(184, 158, 169, 0.075);
+    padding: 0.5rem;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.shortener-form button{
+    padding: 1rem;
+    border: 2px solid #ccc;
+    justify-content: center;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.shortener-form button:hover{
+    background-color: black;
+    color: white;
+    transition: all ease-in-out 0.25s;
+    
+}
+
+.shortener-url{
+    align-items: center;
+    padding: 1rem;
+    border-radius: 25px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.shortener-result {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.shortener-copy {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .scroll {
+    color: black;
+    border: dotted;
+    padding: 5px 10px;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
