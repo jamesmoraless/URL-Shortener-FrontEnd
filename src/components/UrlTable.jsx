@@ -42,7 +42,6 @@ export default function UrlTable() {
                 <tr key={url.short_id}>
                   <td>{url.long_url}</td>
                   <td>http://localhost:5000/api/v1/urlshortener/{url.short_id}</td>
-                  {/*<td>{url.times_used}</td>*/}
                 </tr>
               ))}
             </tbody>

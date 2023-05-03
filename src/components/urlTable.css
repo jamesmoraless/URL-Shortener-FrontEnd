@@ -3,17 +3,27 @@
     margin-top: 10rem;
     margin-bottom: 15rem;
   }
+
+  .urltable-container {
+    /* Set the distance from the sides of the screen */
+    padding: 0 25px; /* 25px padding on left and right, 0 padding on top and bottom */
+    
+    /* Add a max-width and set margin to auto to keep the container centered */
+    max-width: 90%;
+    margin: 0 auto;
+    }
+
 .url-table {
-    table-layout: auto;
     border-collapse: collapse;
-    margin-top: 20px;
     width: 100%;
+    
   }
 
   .urltable-title {
     justify-content: center;
     align-items: center;
     display:flex;
+    font-size: xx-large;
   }
   
   .url-table th {
@@ -21,12 +31,18 @@
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
+    word-wrap: break-word;
+    max-width: 550px;
+    font-size: large;
   }
   
   .url-table td {
     border: 1px solid #ddd;
     padding: 10px;
-    text-align: center;
+    text-align: left;
+    word-wrap: break-word;
+    max-width: 550px;
+
   }
   
   .url-table tr:nth-child(even) {

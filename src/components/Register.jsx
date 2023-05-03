@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import './register.css';
+import { withRouter } from 'react-router-dom';
 
-export default function Register() {
+
+export default function Register(props) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,6 +26,8 @@ export default function Register() {
 
             if (data.username){
                 setMessage('Registration succesful! Please login.');//send a hyperlink through 'login'
+                props.history.push('/login');
+                
             } else{
                 setMessage(data.message || 'An error occured during registration');
             }

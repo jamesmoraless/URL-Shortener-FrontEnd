@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './login.css';
+import { withRouter } from 'react-router-dom';
 
-export default function Login() {
+
+export default function Login(props) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
@@ -25,6 +27,8 @@ export default function Login() {
                 localStorage.setItem('jwtToken', data.token);
                 //console.log(localStorage.getItem('jwtToken'));
                 setMessage('Login succesful!');//send a hyperlink through 'login'
+                props.history.push('/shortener');
+                
             } else{
                 setMessage(data.message || 'An error occured during registration');
             }
