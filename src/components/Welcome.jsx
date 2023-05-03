@@ -27,10 +27,12 @@ export default function Welcome(props) {
       
     return (
     <div className="welcome-container">
+        <div className="top-page-box">
       <h1 className="welcome-title">Welcome to My URL Shortener</h1>
       <p className="intro-text">This is a URL shortener project that helps you create 
       shorter URLs for easy sharing and improved user experience.</p>
       <img className='project-image' src={projectImage} alt="Example of the Url Shortener"/>
+      </div>
       <div className="about-me-box">
         <h2>About Me and My Project</h2>
         <p>Hi! My name is James Morales and I am a Software Engineering student with a passion for 
