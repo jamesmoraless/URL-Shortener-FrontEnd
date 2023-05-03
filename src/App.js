@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Welcome from "./components/Welcome";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Shortener from "./components/Shortener";
@@ -17,7 +18,8 @@ function App() {
   return (
         <BrowserRouter>
           <Switch>
-              <Route exact path='/' component={Register} />
+              <Route exact path='/' component={Welcome} />
+              <Route exact path='/register' component={Register} />
               <Route path='/login' component={Login} />
               <Route path='/shortener' render={() => (
                 <div>
@@ -26,7 +28,9 @@ function App() {
             </div>
         )} />
           </Switch>
-        </BrowserRouter>
+        </BrowserRouter> 
+        
+
 
 
 
